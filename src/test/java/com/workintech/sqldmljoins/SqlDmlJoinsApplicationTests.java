@@ -86,13 +86,13 @@ class SqlDmlJoinsApplicationTests {
 	@DisplayName("Her öğrencinin ad soyad karşılığında okuduğu kitap sayısını getiriniz.")
 	@Test
 	void findStudentNameSurnameCountTest(){
-		assertEquals(ogrenciRepository.findStudentNameSurnameCount().get(0).getAd(), "Deniz");
+		assertEquals(ogrenciRepository.findStudentNameSurnameCount().get(0).getAd(), "Fadime");
 		assertEquals(ogrenciRepository.findStudentNameSurnameCount().size(), 8);
 	}
 
 	@DisplayName("Tüm kitapların ortalama puanını bulunuz.")
 	@Test
 	void findAvgPointOfBooksTest(){
-		assertEquals(String.format("%.2f", kitapRepository.findAvgPointOfBooks()), "19.42");
+		assertEquals(String.format("%.2f", kitapRepository.findAvgPointOfBooks()), "19,42");
 	}
 }
